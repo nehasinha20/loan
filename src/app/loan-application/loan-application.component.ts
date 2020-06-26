@@ -7,12 +7,17 @@ import {Validators, FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./loan-application.component.css']
 })
 export class LoanApplicationComponent implements OnInit {
-
+	 public blockFrmGroup: FormGroup;
   constructor( private fb: FormBuilder ) {
-    /*this.applFrmGroup = this.fb.group({
-      loanApplicationDate: ['', Validators.required],
-      applicationMode: ['']
-    });*/
+    this.blockFrmGroup = this.fb.group({
+      blockName: ['', Validators.required],
+      partyName: [''],
+      length: [''],
+      width: [''],
+      height: [''],
+      description: [''],
+      entryDate: ['', Validators.required]
+    });
   }
 
   ngOnInit(): void {
