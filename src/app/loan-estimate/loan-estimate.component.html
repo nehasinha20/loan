@@ -1,38 +1,45 @@
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Fee Code</th>
-      <th scope="col">Fee Amount</th>
-      <th scope="col">Fee to be Paid</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let entity of entities; index as index">
-      <th scope="row">{{index + 1}}</th>
-      <td>{{ entity.feeCode }}</td>
-      <td (click)="editForm(entity)">
-      	<span *ngIf="!entity.editMode">{{entity.feeAmount}}</span>
-                  <input type="text" *ngIf="entity.editMode" name="feeAmount" class="form-control" [(ngModel)]="entity.feeAmount" placeholder="Fee Amount" required="" #feeAmount="ngModel"/>
-      	
-      </td>
-      <td (click)="editForm(entity)">
-      	<span *ngIf="!entity.editMode">{{entity.feePaid}}</span>
+<section class="main-container">
+    <div class="container">
+    	<h3>Loan Estimate :</h3>
+	  			<hr>
+		<table class="table">
+		  <thead>
+		    <tr>
+		      <th scope="col">#</th>
+		      <th scope="col">Fee Code</th>
+		      <th scope="col">Fee Amount</th>
+		      <th scope="col">Fee to be Paid</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr *ngFor="let entity of entities; index as index">
+		      <td scope="row">{{index + 1}}</td>
+		      <td>{{ entity.feeCode }}</td>
+		      <td (click)="editForm(entity)">
+		      	<span *ngIf="!entity.editMode">{{entity.feeAmount}}</span>
+		                  <input type="text" *ngIf="entity.editMode" name="feeAmount" class="form-control" [(ngModel)]="entity.feeAmount" placeholder="Fee Amount" required="" #feeAmount="ngModel"/>
+		      	
+		      </td>
+		      <td (click)="editForm(entity)">
+		      	<span *ngIf="!entity.editMode">{{entity.feePaid}}</span>
 
-      	<select *ngIf="entity.editMode" class="custom-select d-block w-100" required="" [(ngModel)]="entity.feePaid" #feePaid="ngModel">
-			<option value="">Choose..</option>
-			<option value="Borrower">Borrower</option>
-			<option value="Lender">Lender</option>
-		</select>
-      	
-      </td>
-      <td>
-          <button class="btn btn-primary" *ngIf="!entity.editMode" (click)="editForm(entity)">Edit</button>
-          
-          <button class="btn btn-primary" *ngIf="entity.editMode" (click)="saveEntity(entity, index)" style="margin-right: 5px;">Save</button>
-          <button class="btn btn-primary" *ngIf="entity.editMode" (click)="cancel(entity)">Cancel</button>
-      </td>
-    </tr>
-    
-  </tbody>
-</table>
+		      	<select *ngIf="entity.editMode" class="custom-select d-block w-100" required="" [(ngModel)]="entity.feePaid" #feePaid="ngModel">
+					<option value="">Choose..</option>
+					<option value="Borrower">Borrower</option>
+					<option value="Lender">Lender</option>
+				</select>
+		      	
+		      </td>
+		      <td>
+		          <button class="btn btn-primary" *ngIf="!entity.editMode" (click)="editForm(entity)">Edit</button>
+		          
+		          <button class="btn btn-primary" *ngIf="entity.editMode" (click)="saveEntity(entity, index)" style="margin-right: 5px;">Save</button>
+		          <button class="btn btn-primary" *ngIf="entity.editMode" (click)="cancel(entity)">Cancel</button>
+		      </td>
+		    </tr>
+		    
+		  </tbody>
+		</table>
+
+	</div>
+</section>
