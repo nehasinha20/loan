@@ -14,6 +14,9 @@ import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { LoanApplicationComponent } from './loan-application/loan-application.component';
+import { LoanInformationComponent } from './loan-information/loan-information.component';
+import { LoanEstimateComponent } from './loan-estimate/loan-estimate.component';
+import { LoanPackageComponent } from './loan-package/loan-package.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -23,7 +26,10 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   declarations: [
     AppComponent,
     SidebarComponent,
-    LoanApplicationComponent
+    LoanApplicationComponent,
+    LoanInformationComponent,
+    LoanEstimateComponent,
+    LoanPackageComponent
   ],
   imports: [
     BrowserModule,

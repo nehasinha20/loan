@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, Routes, RouterModule } from '@angular/router';
 import { LoanApplicationComponent } from './loan-application/loan-application.component';
+import { LoanInformationComponent } from './loan-information/loan-information.component';
+import { LoanEstimateComponent } from './loan-estimate/loan-estimate.component';
+import { LoanPackageComponent } from './loan-package/loan-package.component';
 
 //const routes: Routes = [];
 
@@ -11,6 +14,9 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   { path: 'app-loan-application', component: LoanApplicationComponent },
+  { path: 'app-loan-information', component: LoanInformationComponent },
+  { path: 'app-loan-estimate', component: LoanEstimateComponent },
+  { path: 'app-loan-package', component: LoanPackageComponent },
 
   /*,
   {

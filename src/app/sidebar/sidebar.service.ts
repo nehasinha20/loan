@@ -27,7 +27,7 @@ export class SidebarService {
       icon: 'fa fa-inr',
       active: false,
       type: 'simple',
-      url: '/app-loan-application',
+      url: '/app-loan-information',
       badge: {
         text: '3',
         class: 'badge-danger'
@@ -38,7 +38,7 @@ export class SidebarService {
       icon: 'fa fa-inr',
       active: false,
       type: 'simple',
-      url: '/app-loan-application',
+      url: '/app-loan-estimate',
       badge: {
         text: '3',
         class: 'badge-danger'
@@ -49,7 +49,7 @@ export class SidebarService {
       icon: 'fa fa-inr',
       active: false,
       type: 'simple',
-      url: '/app-loan-application',
+      url: '/app-loan-package',
       badge: {
         text: '3',
         class: 'badge-danger'
