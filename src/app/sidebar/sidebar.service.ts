@@ -13,7 +13,7 @@ export class SidebarService {
     },
     {
       title: 'Loan Application',
-      icon: 'fas fa-inr',
+      icon: 'fa fa-list-alt',
       active: false,
       type: 'simple',
       url: '/app-loan-application',
@@ -23,7 +23,7 @@ export class SidebarService {
       }*/
     },{
       title: 'Loan Information',
-      icon: 'fa fa-inr',
+      icon: 'fa fa-list-alt',
       active: false,
       type: 'simple',
       url: '/app-loan-information',
@@ -31,7 +31,7 @@ export class SidebarService {
     },
     {
       title: 'Loan Estimate',
-      icon: 'fa fa-inr',
+      icon: 'fa fa-list-alt',
       active: false,
       type: 'simple',
       url: '/app-loan-estimate',
@@ -39,7 +39,7 @@ export class SidebarService {
     },
       {
       title: 'Loan Package',
-      icon: 'fa fa-inr-alt',
+      icon: 'fa fa-list-alt',
       active: false,
       type: 'simple',
       url: '/app-loan-package',

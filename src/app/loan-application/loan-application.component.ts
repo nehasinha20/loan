@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Validators, FormBuilder, FormGroup } from '@angular/forms';
+import {NgbDateStruct, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-loan-application',
@@ -8,18 +9,14 @@ import {Validators, FormBuilder, FormGroup } from '@angular/forms';
 })
 export class LoanApplicationComponent implements OnInit {
 	 public blockFrmGroup: FormGroup;
-  constructor( private fb: FormBuilder ) {
-    this.blockFrmGroup = this.fb.group({
-      blockName: ['', Validators.required],
-      partyName: [''],
-      length: [''],
-      width: [''],
-      height: [''],
-      description: [''],
-      entryDate: ['', Validators.required]
-    });
+   public model: NgbDateStruct;
+  public date: {year: number, month: number};
+  constructor( private fb: FormBuilder, private calendar: NgbCalendar) {
+    
   }
-
+  selectToday() {
+    this.model = this.calendar.getToday();
+  }
   ngOnInit(): void {
   }
 

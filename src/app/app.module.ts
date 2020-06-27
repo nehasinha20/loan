@@ -17,6 +17,7 @@ import { LoanApplicationComponent } from './loan-application/loan-application.co
 import { LoanInformationComponent } from './loan-information/loan-information.component';
 import { LoanEstimateComponent } from './loan-estimate/loan-estimate.component';
 import { LoanPackageComponent } from './loan-package/loan-package.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -38,7 +39,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     BrowserAnimationsModule,
     PerfectScrollbarModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: [{
   	provide: PERFECT_SCROLLBAR_CONFIG,
