@@ -8,30 +8,26 @@ export class SidebarService {
   _hasBackgroundImage = true;
   menus = [
     {
-      title: 'general',
+      title: 'Loan Menu',
       type: 'header'
     },
-
     {
       title: 'Loan Application',
       icon: 'fas fa-inr',
       active: false,
       type: 'simple',
       url: '/app-loan-application',
-      badge: {
+      /*badge: {
         text: '3',
         class: 'badge-danger'
-      }
+      }*/
     },{
       title: 'Loan Information',
       icon: 'fa fa-inr',
       active: false,
       type: 'simple',
       url: '/app-loan-information',
-      badge: {
-        text: '3',
-        class: 'badge-danger'
-      }
+      
     },
     {
       title: 'Loan Estimate',
@@ -39,21 +35,15 @@ export class SidebarService {
       active: false,
       type: 'simple',
       url: '/app-loan-estimate',
-      badge: {
-        text: '3',
-        class: 'badge-danger'
-      },
+      
     },
       {
       title: 'Loan Package',
-      icon: 'fa fa-inr',
+      icon: 'fa fa-inr-alt',
       active: false,
       type: 'simple',
       url: '/app-loan-package',
-      badge: {
-        text: '3',
-        class: 'badge-danger'
-      }
+      
     }
   ];
   constructor() { }
